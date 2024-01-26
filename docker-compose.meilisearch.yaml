@@ -1,3 +1,4 @@
+#ddev-generated
 services:
   meilisearch:
     container_name: ddev-${DDEV_SITENAME}-meilisearch
@@ -36,4 +37,4 @@ services:
     external_links:
       - "ddev-router:${DDEV_SITENAME}.${DDEV_TLD}"
 volumes:
-  meilisearch:
+  meili_data:
