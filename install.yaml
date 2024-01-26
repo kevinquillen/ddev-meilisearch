@@ -1,4 +1,4 @@
-name: typesense
+name: meilisearch
 
 project_files:
-  - docker-compose.typesense.yaml
+  - docker-compose.meilisearch.yaml
