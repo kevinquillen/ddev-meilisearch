@@ -10,28 +10,18 @@ With DDEV installed, run this command:
 
 ## Configuration
 
-The Meilisearch container is reached at hostname: "typesense", port: 8108.
+The Meilisearch container is reached at hostname: "meilisearch", port: 7700.
 
-Outside of the container, you can visit `127.0.0.1:8109/health` in your browser to verify health status.
+Outside of the container, you can visit `127.0.0.1:7700/health` in your browser to verify health status.
 
 The default API key for Meilisearch is `ddev`. You can provide your own by 
-adding to `.ddev/.env` in your project, and adding the `TYPESENSE_API_KEY` variable:
+adding to `.ddev/.env` in your project, and adding the `MEILI_MASTER_KEY` variable:
 
-`TYPESENSE_API_KEY=my_api_key_value`
+`MEILI_MASTER_KEY=my_api_key_value`
 
 ## Admin Dashboard
 
-This DDEV addon also includes the admin dashboard by bfritscher:
-
-https://github.com/bfritscher/typesense-dashboard
-
-The admin dashboard is useful to navigate your collections and schema and debug your search.
-
-You can access the admin dashboard by navigating to this URL in your browser:
-
-`http://meilisearch.(DDEV_HOSTNAME):8109/#/login`
-
-To login, provide the configured API key, `127.0.0.1` as the hostname, and `8108` as the port. Leave the path blank.
+tbd
 
 # Drupal and Search API
 
