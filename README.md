@@ -23,7 +23,7 @@ adding to `.ddev/.env` in your project, and adding the `MEILI_MASTER_KEY` variab
 
 This DDEV addon also includes the admin dashboard by riccoxie:
 
-https://github.com/riccoxie/meilisearch-ui
+https://github.com/riccox/meilisearch-ui
 
 The admin dashboard is useful to navigate your collections and schema and debug your search.
 
