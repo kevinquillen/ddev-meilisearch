@@ -30,7 +30,7 @@ services:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: $DDEV_APPROOT
     ports:
-      - "80:24900"
+      - "8100:24900"
     environment:
       - VIRTUAL_HOST=meilisearch.$DDEV_HOSTNAME
     external_links:
