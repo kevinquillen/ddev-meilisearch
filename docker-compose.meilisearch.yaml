@@ -4,7 +4,6 @@ services:
     container_name: ddev-${DDEV_SITENAME}-meilisearch
     hostname: ${DDEV_SITENAME}-meilisearch
     image: getmeili/meilisearch:v1.6
-    command: '--data-dir /data --enable-cors'
     networks: [default, ddev_default]
     restart: "on-failure"
     environment:
