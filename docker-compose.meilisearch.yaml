@@ -1,0 +1,39 @@
+services:
+  meilisearch:
+    container_name: ddev-${DDEV_SITENAME}-meilisearch
+    hostname: ${DDEV_SITENAME}-meilisearch
+    image: getmeili/meilisearch:v1.6
+    command: '--data-dir /data --enable-cors'
+    networks: [default, ddev_default]
+    restart: "on-failure"
+    environment:
+      - MEILI_MASTER_KEY=${MEILI_MASTER_KEY:-ddev}
+    ports:
+      - "7700:7700"
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    volumes:
+      - "meili_data:/meili_data"
+      - ".:/mnt/ddev_config"
+  # This links the Meilisearch service to the web service defined in the main
+  # docker-compose.yml, allowing applications running inside the web container to
+  # access the Meilisearch service at http://meilisearch:7700
+  web:
+    links:
+      - meilisearch:meilisearch
+  meilisearch_admin:
+    container_name: ddev-${DDEV_SITENAME}-meilisearch-admin
+    image: riccoxie/meilisearch-ui:latest
+    restart: always
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    ports:
+      - "80:24900"
+    environment:
+      - VIRTUAL_HOST=meilisearch.$DDEV_HOSTNAME
+    external_links:
+      - "ddev-router:${DDEV_SITENAME}.${DDEV_TLD}"
+volumes:
+  meilisearch:

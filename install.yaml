@@ -1,0 +1,4 @@
+name: typesense
+
+project_files:
+  - docker-compose.typesense.yaml
