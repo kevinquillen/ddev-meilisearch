@@ -5,9 +5,11 @@
 [Meilisearch](https://www.meilisearch.com/) is a flexible and powerful user-focused search engine that can 
 be added to any website or application.
 
-## Installation
+This DDEV add on adds Meilisearch as a local service.
 
-Uses the current stable release of the Meilisearch Docker image.
+<img width="1723" alt="Screenshot 2024-01-27 at 11 15 42 AM" src="https://github.com/kevinquillen/ddev-meilisearch/assets/362176/958ae356-3254-43bf-99b6-59f6368712c2">
+
+## Installation
 
 With DDEV installed, run this command:
 
