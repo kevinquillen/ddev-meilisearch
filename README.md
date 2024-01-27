@@ -1,5 +1,10 @@
 [![tests](https://github.com/kevinquillen/ddev-meilisearch/actions/workflows/tests.yml/badge.svg)](https://github.com/kevinquillen/ddev-meilisearch/actions/workflows/tests.yml)
 
+## About
+
+[Meilisearch](https://www.meilisearch.com/) is a flexible and powerful user-focused search engine that can 
+be added to any website or application.
+
 ## Installation
 
 Uses the current stable release of the Meilisearch Docker image.
