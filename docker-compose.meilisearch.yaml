@@ -6,10 +6,13 @@ services:
     image: getmeili/meilisearch:v1.6
     networks: [default, ddev_default]
     restart: "on-failure"
+    expose:
+      - "7700"
     environment:
       - MEILI_MASTER_KEY=${MEILI_MASTER_KEY:-ddev}
-    ports:
-      - "7700:7700"
+      - VIRTUAL_HOST=$DDEV_HOSTNAME
+      - HTTP_EXPOSE=7700:7700
+      - HTTPS_EXPOSE=7701:7700
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: $DDEV_APPROOT
@@ -22,18 +25,5 @@ services:
   web:
     links:
       - meilisearch:meilisearch
-  meilisearch_admin:
-    container_name: ddev-${DDEV_SITENAME}-meilisearch-admin
-    image: riccoxie/meilisearch-ui:latest
-    restart: always
-    labels:
-      com.ddev.site-name: ${DDEV_SITENAME}
-      com.ddev.approot: $DDEV_APPROOT
-    ports:
-      - "8100:24900"
-    environment:
-      - VIRTUAL_HOST=meilisearch.$DDEV_HOSTNAME
-    external_links:
-      - "ddev-router:${DDEV_SITENAME}.${DDEV_TLD}"
 volumes:
   meili_data:
