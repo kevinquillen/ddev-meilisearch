@@ -7,8 +7,6 @@ be added to any website or application.
 
 This DDEV add on adds Meilisearch as a local service.
 
-<img width="1723" alt="Screenshot 2024-01-27 at 11 15 42 AM" src="https://github.com/kevinquillen/ddev-meilisearch/assets/362176/958ae356-3254-43bf-99b6-59f6368712c2">
-
 ## Installation
 
 With DDEV installed, run this command:
@@ -28,18 +26,14 @@ adding to `.ddev/.env` in your project, and adding the `MEILI_MASTER_KEY` variab
 
 ## Admin Dashboard
 
-This DDEV addon also includes the admin dashboard by Ricco Xie:
-
-https://github.com/riccox/meilisearch-ui
-
-The admin dashboard is useful to navigate your collections, schema, and debug your search.
+The admin dashboard is useful to navigate your collections and debug your 
+search.
 
 You can access the admin dashboard by navigating to this URL in your browser:
 
-`http://meilisearch.(DDEV_HOSTNAME):8100`
+`https://(DDEV_HOSTNAME):7701`
 
-To login, provide the configured API key, `127.0.0.1` as the hostname, and 
-`7700` as the port.
+To login provide the configured API key.
 
 # Drupal and Search API
 

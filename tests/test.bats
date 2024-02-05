@@ -13,8 +13,6 @@ setup() {
 
 health_checks() {
   ddev exec "curl -s meilisearch:7700/health" | grep "available"
-  # todo: fix later when we understand why this fails in GHA but not on local machine
-  # ddev exec "curl -s -o /dev/null -I -w '%{http_code}' meilisearch_admin" | grep "200"
 }
 
 teardown() {
