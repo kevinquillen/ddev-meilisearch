@@ -13,7 +13,7 @@ setup() {
 
 health_checks() {
   ddev exec "curl -s meilisearch:7700/health" | grep "available"
-  ddev exec "curl -s -o /dev/null -I -w '%{http_code}' meilisearch:7701" | grep "200"
+  curl -s -o /dev/null -I -w '%{http_code}' https://test-meilisearch.ddev.site:7701 | grep "200"
 }
 
 teardown() {
