@@ -5,7 +5,7 @@ services:
     hostname: ${DDEV_SITENAME}-meilisearch
     image: getmeili/meilisearch:v1.9
     networks: [default, ddev_default]
-    restart: "on-failure"
+    restart: "no"
     expose:
       - "7700"
     environment:
