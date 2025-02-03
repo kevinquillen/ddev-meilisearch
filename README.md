@@ -9,9 +9,19 @@ This DDEV add on adds Meilisearch as a local service.
 
 ## Installation
 
-With DDEV installed, run this command:
+With DDEV installed:
 
-`ddev get kevinquillen/ddev-meilisearch`
+For DDEV v1.23.5 or above run
+
+```sh
+ddev add-on get kevinquillen/ddev-meilisearch
+```
+
+For earlier versions of DDEV run
+
+```sh
+ddev get kevinquillen/ddev-meilisearch
+```
 
 ## Configuration
 
