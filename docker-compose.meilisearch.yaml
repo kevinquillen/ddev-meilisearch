@@ -3,7 +3,7 @@ services:
   meilisearch:
     container_name: ddev-${DDEV_SITENAME}-meilisearch
     hostname: ${DDEV_SITENAME}-meilisearch
-    image: getmeili/meilisearch:v1.9
+    image: getmeili/meilisearch:v1.14
     networks: [default, ddev_default]
     restart: "no"
     expose:
